@@ -9,16 +9,16 @@
 
 ## 🚀 Overview
 
-This repository contains the source code for the **Sequential Sensitivity Analysis (SSA)** framework applied to Multimodal Large Language Models (specifically CLIP). Our method enhances the detection of rare orbital diseases by leveraging clinical-specific prompt augmentation and sensitivity-aware fine-tuning.
+This repository contains the source code for the Sequential Sensitivity Analysis framework applied to Multimodal Large Language Models . Our method enhances the detection of rare orbital diseases by leveraging clinical-specific prompt augmentation and sensitivity-aware fine-tuning.
 
-The framework is designed to align high-dimensional medical imaging features (CT/MRI/Photography) with distinct clinical textual descriptions, improving zero-shot generalization on external validation cohorts.
+The framework is designed to align high-dimensional medical imaging features with distinct clinical textual descriptions, improving zero-shot generalization on external validation cohorts.
 
 ## 📂 Repository Structure
 
 The codebase is organized into three core modules to ensure reproducibility:
 
 * **`data_preprocess.py`**: A stratified dataset partitioning tool that ensures rare disease prevalence is preserved across training and validation splits.
-* **`clip_train.py`**: The main training engine implementing the SSA protocol, including dynamic clinical prompt sampling and contrastive loss optimization.
+* **`clip_train.py`**: The main training engine implementing the protocol, including dynamic clinical prompt sampling and contrastive loss optimization.
 * **`inference.py`**: An inference engine for external validation, generating publication-quality metrics (Confusion Matrices, ROC-AUC, Classification Reports).
 
 ## 🛠️ Installation
@@ -67,8 +67,7 @@ python clip_train.py \
   --save-dir "clip_model_checkpoints" \
   --model-name "ViT-B-32-256" \
   --batch-size 200 \
-  --epochs 100 \
-  --lr 1e-8
+  --epochs 100 
 ```
 ### 3. External Validation & Metrics (inference.py)
 Evaluate the model's generalization on independent external cohorts. This script calculates the Top-1 accuracy, F1-score, and generates a publication-ready confusion matrix.
