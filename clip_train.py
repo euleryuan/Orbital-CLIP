@@ -264,8 +264,8 @@ if __name__ == "__main__":
     parser.add_argument("--cache-dir", type=str, default="model_download/")
     
     # Data Configuration
-    parser.add_argument("--train-dir", type=str, default="dataset_eye/train")
-    parser.add_argument("--val-dir", type=str, default="dataset_eye/val")
+    parser.add_argument("--train-dir", type=str, default="dataset_orbital_diseases/train")
+    parser.add_argument("--val-dir", type=str, default="dataset_orbital_diseases/val")
     parser.add_argument("--save-dir", type=str, default="clip_model_checkpoints")
     
     # Training Hyperparameters
