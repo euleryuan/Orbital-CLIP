@@ -41,7 +41,7 @@ The codebase is organized into three core modules to ensure reproducibility:
 Organize your raw dataset into class-specific folders. Run the preprocessing script to generate a stratified split.
 
 **Expected Input Structure:**
-```text
+text
 dataset_root/
     ├── orbital disease/
     ├── healthy eyes/
@@ -87,17 +87,5 @@ To respect patient confidentiality, raw images are not hosted in this public rep
 📜 Citation
 If this codebase assists in your research, please cite our work:
 
-Code snippet
-@article{YourName2026Orbital,
-  title={Sequential Sensitivity Analysis of Multimodal Large Language Models for Rare Orbital Disease Detection},
-  author={Your Name and Co-authors},
-  journal={Communications Medicine},
-  year={2026},
-  publisher={Nature Portfolio},
-  doi={10.1038/s43856-xxx-xxxx-x}
-}
 📄 License
 This project is licensed under the Apache License 2.0.
-
-📄 License
-This project is licensed under the MIT License.
