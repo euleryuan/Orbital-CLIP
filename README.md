@@ -18,7 +18,7 @@ The framework is designed to align high-dimensional medical imaging features (CT
 The codebase is organized into three core modules to ensure reproducibility:
 
 * **`data_preprocess.py`**: A stratified dataset partitioning tool that ensures rare disease prevalence is preserved across training and validation splits.
-* **`train_ssa.py`**: The main training engine implementing the SSA protocol, including dynamic clinical prompt sampling and contrastive loss optimization.
+* **`clip_train.py`**: The main training engine implementing the SSA protocol, including dynamic clinical prompt sampling and contrastive loss optimization.
 * **`inference.py`**: An inference engine for external validation, generating publication-quality metrics (Confusion Matrices, ROC-AUC, Classification Reports).
 
 ## 🛠️ Installation
@@ -41,13 +41,13 @@ The codebase is organized into three core modules to ensure reproducibility:
 Organize your raw dataset into class-specific folders. Run the preprocessing script to generate a stratified split.
 
 **Expected Input Structure:**
-text
+```text
 dataset_root/
     ├── orbital disease/
     ├── healthy eyes/
     └── non-orbital disease/
-}
-Note: Ensure the DATASET_ROOT path within the script points to your local data directory.
+```
+Note: Ensure the dataset_root path within the script points to your local data directory.
 
 ### 2. Fine-tuning (clip_train.py)
 This module fine-tunes the CLIP backbone using the Sequential Sensitivity Analysis protocol. It utilizes dynamic clinical prompt sampling to enhance model sensitivity to rare pathologies.
@@ -60,10 +60,10 @@ Key Parameters:
 
 Command:
 
-```
+```bash
 python clip_train.py \
-  --train-dir "dataset_eye/train" \
-  --val-dir "dataset_eye/val" \
+  --train-dir "dataset_root/train" \
+  --val-dir "dataset_root/val" \
   --save-dir "clip_model_checkpoints" \
   --model-name "ViT-B-32-256" \
   --batch-size 200 \
@@ -75,7 +75,7 @@ Evaluate the model's generalization on independent external cohorts. This script
 
 Command:
 
-```
+```bash
 python inference.py \
   --test-dir "path/to/external_validation_set" \
   --checkpoint "clip_model_checkpoints/clip_model_epoch_best.pt" \
@@ -87,7 +87,7 @@ The clinical orbital imaging dataset utilized in this study contains sensitive p
 To respect patient confidentiality, raw images are not hosted in this public repository. However, we provide the complete methodological framework, preprocessing pipelines, and core training logic to allow for full algorithmic replication. For access to de-identified data for research purposes, please contact the corresponding author, subject to ethical approval and data-use agreements.
 
 ## 📜 Citation
-If this codebase assists in your research, please cite our work:
+If this codebase assists in your research, please cite our work: Sequential Sensitivity Analysis of MultimodalLarge Language Models for Rare Orbital Disease Detection.
 
 ## 📄 License
 This project is licensed under the Apache License 2.0.
