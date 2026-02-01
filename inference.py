@@ -259,7 +259,7 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run External Validation for Orbital-CLIP")
     
-    parser.add_argument("--test-dir", type=str, default="dataset_eye_cut_ninth_easy2", 
+    parser.add_argument("--test-dir", type=str, default="external_dataset", 
                         help="Path to external validation dataset root")
     parser.add_argument("--model-name", type=str, default="ViT-B-32-256")
     parser.add_argument("--checkpoint", type=str, default="clip_model_checkpoints/clip_model_epoch_best.pt",
