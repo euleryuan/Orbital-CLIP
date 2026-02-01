@@ -60,7 +60,7 @@ Key Parameters:
 
 Command:
 
-Bash
+```
 python clip_train.py \
   --train-dir "dataset_eye/train" \
   --val-dir "dataset_eye/val" \
@@ -69,23 +69,25 @@ python clip_train.py \
   --batch-size 200 \
   --epochs 100 \
   --lr 1e-8
+```
 ### 3. External Validation & Metrics (inference.py)
 Evaluate the model's generalization on independent external cohorts. This script calculates the Top-1 accuracy, F1-score, and generates a publication-ready confusion matrix.
 
 Command:
 
-Bash
+```
 python inference.py \
   --test-dir "path/to/external_validation_set" \
   --checkpoint "clip_model_checkpoints/clip_model_epoch_best.pt" \
   --model-name "ViT-B-32-256"
-🔒 Data Availability Statement
+```
+## 🔒 Data Availability Statement
 The clinical orbital imaging dataset utilized in this study contains sensitive patient information and is protected under institutional privacy protocols (compliant with GDPR/HIPAA).
 
 To respect patient confidentiality, raw images are not hosted in this public repository. However, we provide the complete methodological framework, preprocessing pipelines, and core training logic to allow for full algorithmic replication. For access to de-identified data for research purposes, please contact the corresponding author, subject to ethical approval and data-use agreements.
 
-📜 Citation
+## 📜 Citation
 If this codebase assists in your research, please cite our work:
 
-📄 License
+## 📄 License
 This project is licensed under the Apache License 2.0.
