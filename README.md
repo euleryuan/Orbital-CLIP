@@ -87,6 +87,15 @@ To respect patient confidentiality, raw images are not hosted in this public rep
 
 ## 📜 Citation
 If this codebase assists in your research, please cite our work: Sequential Sensitivity Analysis of MultimodalLarge Language Models for Rare Orbital Disease Detection.
+```text
+@article{2026sequential,
+  title={Sequential sensitivity analysis of multimodal large language models for rare orbital disease detection},
+  author={Lei, Chaoyu and Ji, Kaiyuan and Zhao, Chen and Zhong, Sisi and Cao, Chenyu and Chen, Hao and Yip, Chee Chew and Sintuwong, Sunisa and Ding, Jianbin and Pandiyan, PS and others},
+  journal={Communications Medicine},
+  year={2026},
+  publisher={Nature Publishing Group UK London}
+}
+```
 
 ## 📄 License
 This project is licensed under the Apache License 2.0.
